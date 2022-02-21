@@ -1,0 +1,58 @@
+= Cuatom Serial Library for Arduino =
+
+This library allows an Arduino board to use an uart with the control of interrupt routine and buffer size in user's hand.
+To use this libaray comment the section as given below in HardwareSerial.h
+
+#if defined(UBRRH) || defined(UBRR0H)
+  extern HardwareSerial Serial;
+  #define HAVE_HWSERIAL0
+#endif
+#if defined(UBRR1H)
+  extern HardwareSerial Serial1;
+  #define HAVE_HWSERIAL1
+#endif
+#if defined(UBRR2H)
+  extern HardwareSerial Serial2;
+  #define HAVE_HWSERIAL2
+#endif
+#if defined(UBRR3H)
+  extern HardwareSerial Serial3;
+  #define HAVE_HWSERIAL3
+#endif
+
+to 
+
+// #if defined(UBRRH) || defined(UBRR0H)
+  // extern HardwareSerial Serial;
+  // #define HAVE_HWSERIAL0
+// #endif
+// #if defined(UBRR1H)
+  // extern HardwareSerial Serial1;
+  // #define HAVE_HWSERIAL1
+// #endif
+// #if defined(UBRR2H)
+  // extern HardwareSerial Serial2;
+  // #define HAVE_HWSERIAL2
+// #endif
+// #if defined(UBRR3H)
+  // extern HardwareSerial Serial3;
+  // #define HAVE_HWSERIAL3
+// #endif
+
+== License ==
+
+Copyright (c) 2010 Arduino LLC. All right reserved.
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
